@@ -52,4 +52,34 @@ vector<int> distBeforeNegCycle=dist;
 return dist;
 }
 
+int main(){
+// Number of vertices (n) and edges
+    int n = 5;
+    vector<vector<int>> edges = {
+        {0, 1, -1},
+        {0, 2, 4},
+        {1, 2, 3},
+        {1, 3, 2},
+        {1, 4, 2},
+        {3, 2, 5},
+        {3, 1, 1},
+        {4, 3, -3}
+    };
+    
+int src = 0; // Source vertex
+    vector<int> distances = bellmanFord(n, edges, src);
+
+    if (distances.empty()) {
+        cout << "Stopped due to the negative weight cycle.\n";
+    } else {
+        cout << "Vertex Distance from Source:\n";
+        for (int i = 0; i < distances.size(); ++i) {
+            if (distances[i] == INF)
+                cout << "Vertex " << i << " : INF\n";
+            else
+                cout << "Vertex " << i << " : " << distances[i] << "\n";
+        }
+    }
+  return 0;
+}
 
