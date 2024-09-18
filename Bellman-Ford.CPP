@@ -12,7 +12,7 @@ vector<int> distance(int n, int src){
 void print(const vector<int>& dist){
   for(int i=0;i<dist.size();i++){
     if(dist[i]==INF)
-      cout<<"Vertex"<<" "<<i<<": INF\n";
+      cout<<"Vertex"<<" "<<i<<": INF\n"; 
     else
       cout<<"Vertex"<<" "<<i<<" : "<<dist[i]<<"\n";
     }
