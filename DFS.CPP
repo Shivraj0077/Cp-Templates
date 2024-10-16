@@ -1,8 +1,8 @@
 #include<bits/stdc++.h>
 using namespace std;
 
-vector<int> adj;
-vector<int> vis;
+vector<vector<int>> adj;
+vector<bool> vis;
 
 void dfs(int node){
     vis[node] = true;
