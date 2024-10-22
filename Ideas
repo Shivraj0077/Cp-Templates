@@ -7,3 +7,119 @@ Involving segmnets :
 6) divide and conquer 
 7) binary search
 8) hashing
+
+Involving Graphs:
+1. Shortest Path Problems
+Type: Find the shortest path from a starting node to one or all other nodes in a weighted or unweighted graph.
+
+Unweighted Graph:
+
+Algorithm: Breadth-First Search (BFS)
+Use Case: If all edges have the same weight or no weight (like moving on a chessboard).
+Example: Shortest path in a maze or grid with uniform movement cost.
+Weighted Graph (Non-Negative Weights):
+
+Algorithm: Dijkstra's Algorithm
+Use Case: Find the shortest path where edges have non-negative weights.
+Example: Find the fastest route in a city map where distances or times are given.
+Weighted Graph (Negative Weights):
+
+Algorithm: Bellman-Ford Algorithm
+Use Case: When graph edges can have negative weights and you want to detect if there is a negative-weight cycle.
+Example: Finding the shortest path in a network where there might be debt/credit balances (negative weights).
+All-Pairs Shortest Path:
+
+Algorithm: Floyd-Warshall Algorithm
+Use Case: Find the shortest paths between all pairs of nodes in a dense graph.
+Example: Determine the best route between any two cities in a transportation network.
+
+2. Minimum Spanning Tree (MST) Problems
+Type: Find a subset of edges that connects all nodes with the minimum total edge weight and no cycles.
+Algorithm: Kruskal's Algorithm
+Use Case: Find the MST using edge-based approach and sorting.
+Example: Designing a cost-efficient network of roads between cities.
+Algorithm: Prim's Algorithm
+
+Use Case: Find the MST using a node-based greedy approach.
+Example: Designing a minimum cost computer network connecting multiple computers.
+
+3. Connected Components
+Type: Find all connected components in an undirected graph.
+Algorithm: Depth-First Search (DFS) or Breadth-First Search (BFS)
+Use Case: Explore the graph from each unvisited node and mark all reachable nodes to find separate components.
+Example: Finding groups of people in a social network who are all connected to each other.
+Algorithm: Union-Find (Disjoint Set Union)
+
+Use Case: Track and merge sets efficiently when the graph is being built.
+Example: Tracking connected components dynamically when new connections are added.
+
+4. Cycle Detection
+Type: Detect if a graph contains a cycle.
+Undirected Graph:
+Algorithm: DFS with Parent Tracking
+Use Case: Track back edges to detect cycles.
+Example: Detect cycles in a roadmap where streets must not loop back unnecessarily.
+Directed Graph:
+Algorithm: DFS with Stack or Topological Sort
+Use Case: Detect if there are backward edges during DFS or check if topological sorting is possible.
+Example: Detect cyclic dependencies in a build system (like in a task scheduler).
+
+5. Topological Sorting
+Type: Find a linear order of vertices such that for every directed edge (u, v), vertex u comes before v in the ordering.
+Algorithm: DFS with Post-Ordering or Kahn's Algorithm (BFS-based)
+Use Case: Find an ordering of tasks with dependencies.
+Example: Scheduling tasks in a project management system where some tasks must be done before others.
+
+6. Bipartite Graph Check
+Type: Check if a graph can be colored with two colors such that no two adjacent vertices share the same color.
+Algorithm: BFS/DFS (2-coloring)
+Use Case: Assign two groups to a set of nodes where adjacent nodes cannot be in the same group.
+Example: Determining if a group of friends can be split into two non-conflicting groups.
+
+7. Strongly Connected Components (SCC)
+Type: Find all strongly connected components in a directed graph, where each component is a maximal set of vertices such that there is a path between any two vertices in the component.
+Algorithm: Kosaraju's Algorithm or Tarjan's Algorithm
+Use Case: Analyze the structure of directed graphs, especially for finding dependency cycles.
+Example: Identifying mutually dependent packages in a software dependency graph.
+
+8. Maximum Flow Problems
+Type: Find the maximum flow of a network where edges have capacities (limits) on the flow.
+Algorithm: Edmonds-Karp Algorithm (using BFS to find augmenting paths)
+Use Case: Find the maximum possible flow from source to sink in a network.
+Example: Determine the maximum amount of water that can flow through a network of pipes with varying capacities.
+Algorithm: Dinic's Algorithm (more efficient for large networks)
+Use Case: Same as Edmonds-Karp but faster for large, dense graphs.
+Example: Optimizing data flow in a computer network with bandwidth limitations.
+
+9. Matching Problems
+Type: Find the maximum number of edges that can be chosen such that no two edges share a vertex.
+Algorithm: Bipartite Matching using DFS/BFS (Hopcroft-Karp Algorithm)
+Use Case: Find the maximum matching in a bipartite graph.
+Example: Assign jobs to workers in the most efficient way where each worker can only do specific jobs.
+Algorithm: Hungarian Algorithm
+Use Case: Maximum weight matching in bipartite graphs.
+Example: Matching workers to jobs where each worker has a different efficiency for different jobs.
+
+10. Eulerian Path and Circuit
+Type: Find a path or circuit that visits every edge exactly once.
+Algorithm: Fleury's Algorithm or Hierholzer's Algorithm
+Use Case: Determine if a graph has an Eulerian path or circuit, and if it does, find it.
+Example: Plan a delivery route where every road needs to be traversed exactly once.
+
+11. Hamiltonian Path and Circuit
+Type: Find a path or circuit that visits every vertex exactly once.
+Algorithm: Backtracking or Dynamic Programming
+Use Case: This problem is NP-complete, so exact solutions are often impractical for large graphs. Approximate or heuristic algorithms are used.
+Example: Plan a tour that visits every city exactly once, like the Traveling Salesman Problem (TSP).
+
+12. Graph Coloring
+Type: Assign colors to vertices such that no two adjacent vertices have the same color, using the minimum number of colors.
+Algorithm: Greedy Coloring or Backtracking
+Use Case: Scheduling problems, like exam scheduling where no two adjacent nodes (conflicting exams) can have the same time slot.
+Example: Minimizing the number of classrooms required to schedule conflicting exams.
+
+13. Tree Problems
+Type: Graphs with no cycles, often used to model hierarchical data.
+Algorithm: DFS/BFS, Dynamic Programming on Trees
+Use Case: Solving tree-based problems like finding the diameter of a tree, Lowest Common Ancestor (LCA), or tree-based dynamic programming.
+Example: Find the longest path in an organization’s hierarchy
